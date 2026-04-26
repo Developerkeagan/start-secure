@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { Home, PieChart, Plus, CreditCard, Settings } from "lucide-react";
 
-const items = [
+type NavItem = {
+  id: string;
+  label: string;
+  Icon: typeof Home;
+  primary?: boolean;
+};
+
+const items: NavItem[] = [
   { id: "home", label: "Home", Icon: Home },
   { id: "stats", label: "Stats", Icon: PieChart },
   { id: "add", label: "Add", Icon: Plus, primary: true },
   { id: "cards", label: "Cards", Icon: CreditCard },
   { id: "settings", label: "Settings", Icon: Settings },
-] as const;
+];
 
 export function BottomNav() {
   const [active, setActive] = useState<string>("home");
