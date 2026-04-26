@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Navigate } from "@tanstack/react-router";
+import { createFileRoute, Navigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 function Index() {
-  return <Navigate to="/auth" />;
+  // Mock: jump straight to the dashboard. Swap to "/auth" to test the auth flow.
+  return <Navigate to="/dashboard" />;
 }
