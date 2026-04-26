@@ -55,7 +55,7 @@ function AuthPage() {
         {view === "otp" && (
           <OtpForm
             contact={otpEmail || "your email"}
-            onVerified={() => navigate({ to: "/" })}
+            onVerified={() => navigate({ to: "/dashboard" })}
           />
         )}
       </AuthShell>
